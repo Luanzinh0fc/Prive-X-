@@ -6,7 +6,7 @@
     <title>Cyber Pulse</title>
     <style>
         body {
-            background-color: #000;
+            background-color: #121212;
             color: #fff;
             font-family: 'Roboto', sans-serif;
             margin: 0;
@@ -19,25 +19,27 @@
             text-align: center;
             padding: 1em;
         }
-        .login-container, .content-container {
+        .login-container, .content-container, .save-login-container {
             display: none;
-            background-color: #1c1c1c;
+            background-color: #1e1e1e;
             padding: 2em;
             border-radius: 12px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
             width: 100%;
             max-width: 400px;
+            transition: all 0.3s ease-in-out;
         }
         .active {
             display: block;
         }
         h1 {
-            font-size: 2em;
+            font-size: 2.5em;
             margin-bottom: 1em;
-            color: #1e90ff;
+            color: #00bcd4;
         }
         .login-container input[type="email"],
-        .login-container input[type="password"] {
+        .login-container input[type="password"],
+        .save-login-container button {
             width: 100%;
             padding: 1em;
             margin-bottom: 1em;
@@ -45,25 +47,22 @@
             border-radius: 8px;
             font-size: 1em;
             box-sizing: border-box;
+            background-color: #2c2c2c;
+            color: #fff;
         }
-        .login-container button {
-            background-color: #1e90ff;
+        .login-container button, .save-login-container button {
+            background-color: #00bcd4;
             color: #fff;
             border: none;
             padding: 1em;
             font-size: 1em;
             cursor: pointer;
-            border-radius: 12px;
+            border-radius: 8px;
             transition: all 0.3s;
-            width: 100%;
         }
-        .login-container button:hover {
-            background-color: #4682b4;
+        .login-container button:hover, .save-login-container button:hover {
+            background-color: #0097a7;
             transform: scale(1.05);
-        }
-        .login-container button:active {
-            background-color: #357ab7;
-            transform: scale(0.95);
         }
         .error-message {
             color: red;
@@ -74,12 +73,7 @@
         .content-container h1 {
             font-size: 2em;
             margin-bottom: 0.5em;
-            color: #1e90ff;
-        }
-        .content-container p {
-            font-size: 1.2em;
-            margin-bottom: 1.5em;
-            color: #00ffff;
+            color: #00e5ff;
         }
         .content-container ul {
             list-style: none;
@@ -91,13 +85,13 @@
             margin: 0.5em 0;
         }
         .content-container button {
-            background-color: #1e90ff;
+            background-color: #00bcd4;
             color: #fff;
             border: none;
             padding: 1em;
             font-size: 1em;
             cursor: pointer;
-            border-radius: 12px;
+            border-radius: 8px;
             transition: all 0.3s;
             width: 100%;
             max-width: 400px;
@@ -112,17 +106,13 @@
             height: 24px;
         }
         .content-container button:hover {
-            background-color: #4682b4;
+            background-color: #0097a7;
             transform: scale(1.05);
-        }
-        .content-container button:active {
-            background-color: #357ab7;
-            transform: scale(0.95);
         }
     </style>
 </head>
 <body>
-    <div class="login-container" id="login-container">
+    <div class="login-container active" id="login-container">
         <h1>Login</h1>
         <form id="login-form">
             <input type="email" id="email" placeholder="E-mail" required>
@@ -132,52 +122,65 @@
         <p class="error-message" id="error-message">E-mail ou senha incorretos.</p>
     </div>
 
+    <div class="save-login-container" id="save-login-container">
+        <h1>Salvar Login</h1>
+        <p>Deseja salvar suas credenciais de login para a próxima vez?</p>
+        <button id="save-yes">Sim</button>
+        <button id="save-no">Não</button>
+    </div>
+
     <div class="content-container" id="content-container">
         <h1>Bem-vindo ao Cyber Pulse</h1>
-        <p>Onde você pode guardar qualquer link da web que você deseja salvar.</p>
         <h2>Links:</h2>
         <ul>
-            <li><button onclick="window.location.href='https://www.erome.com/explore';"><img src="https://www.erome.com/favicon.ico" alt="Erome">erome.com</button></li>
-            <li><button onclick="window.location.href='https://adulto.grupos.top/grupodeputaria/HJMsNfh1dlDKU8CffWeXkk';"><img src="https://adulto.grupos.top/favicon.ico" alt="Adulto Grupos">adulto.grupos.top</button></li>
-            <li><button onclick="window.location.href='https://sexomaluco.com/tag/bbb/';"><img src="https://sexomaluco.com/favicon.ico" alt="Sexo Maluco">sexomaluco.com</button></li>
-            <li><button onclick="window.location.href='https://redisex.club/watch/926402df4';"><img src="https://redisex.club/favicon.ico" alt="Redisex">redisex.club</button></li>
-            <li><button onclick="window.location.href='https://www.teenpies.com/?nats=GC1984.2.53.5422.0.0.0.0.0&switched=1&strack=0&mobile=1/';"><img src="https://www.teenpies.com/favicon.ico" alt="TeenPies">teenpies.com</button></li>
-            <li><button onclick="window.location.href='https://princesscum.com/?coupon=13406';"><img src="https://princesscum.com/favicon.ico" alt="Princess Cum">princesscum.com</button></li>
-            <li><button onclick="window.location.href='https://tiktok-18.in/';"><img src="https://tiktok-18.in/favicon.ico" alt="TikTok 18+">tiktok-18.in</button></li>
-            <li><button onclick="window.location.href='https://www.eporner.com/search/novinha-sentando/';"><img src="https://www.eporner.com/favicon.ico" alt="Eporner">eporner.com</button></li>
-            <li><button onclick="window.location.href='https://ru.fap-guru.biz/инцест';"><img src="https://ru.fap-guru.biz/favicon.ico" alt="Fap Guru">fap-guru.biz</button></li>
-            <li><button onclick="window.location.href='https://pt.eporner.com/foto/59BqDQpYJzG/Loving-This-Big-Cock/';"><img src="https://pt.eporner.com/favicon.ico" alt="Eporner">eporner.com</button></li>
-            <li><button onclick="window.location.href='https://www.linksdegrupo.com.br/';"><img src="https://www.linksdegrupo.com.br/favicon.ico" alt="Links de Grupo">linksdegrupo.com.br</button></li>
-            <li><button onclick="window.location.href='https://pt.pornhub.com/';"><img src="https://pt.pornhub.com/favicon.ico" alt="Pornhub">pornhub.com</button></li>
-            <li><button onclick="window.location.href='https://mat6tube.com/recent';"><img src="https://mat6tube.com/favicon.ico" alt="Mat6Tube">mat6tube.com</button></li>
-            <li><button onclick="window.location.href='https://ok.porn/';"><img src="https://ok.porn/favicon.ico" alt="OK Porn">ok.porn</button></li>
-            <li><button onclick="window.location.href='https://xcafe.com/videos/teen/';"><img src="https://xcafe.com/favicon.ico" alt="Xcafe">xcafe.com</button></li>
-            <li><button onclick="window.location.href='https://freefans.tv/';"><img src="https://freefans.tv/favicon.ico" alt="FreeFans">freefans.tv</button></li>
-            <li><button onclick="window.location.href='https://temp-mail.org/pt/';"><img src="https://temp-mail.org/favicon.ico" alt="Temp Mail">temp-mail.org</button></li>
-            <li><button onclick="window.location.href='https://fikfap.com/';"><img src="https://fikfap.com/favicon.ico" alt="FikFap">fikfap.com</button></li>
-            <li><button onclick="window.location.href='https://www.mixputaria.com/category/sexo-caseiro/';"><img src="https://www.mixputaria.com/favicon.ico" alt="Mixputaria">mixputaria.com</button></li>
-            <li><button onclick="window.location.href='https://xvideosonly.com/';"><img src="https://xvideosonly.com/favicon.ico" alt="XvideosOnly">xvideosonly.com</button></li>
-            <li><button onclick="window.location.href='https://tubesafari.com/';"><img src="https://tubesafari.com/favicon.ico" alt="TubeSafari">tubesafari.com</button></li>
-            <li><button onclick="window.location.href='https://lumendatabase.org/';"><img src="https://lumendatabase.org/favicon.ico" alt="Lumen Database">lumendatabase.org</button></li>
-            <li><button onclick="window.location.href='https://ww7.pornhoarder.tv/search/?search=Girlcum&sort=0&date=0&servers%5B%5D=21&servers%5B%5D=40&servers%5B%5D=12&servers%5B%5D=35&servers%5B%5D=25&servers%5B%5D=41&servers%5B%5D=17&author=0&page=1';"><img src="https://ww7.pornhoarder.tv/favicon.ico" alt="Pornhoarder">pornhoarder.tv</button></li>
-            <li><button onclick="window.location.href='https://watchporn.to/search/Girlcum/';"><img src="https://watchporn.to/favicon.ico" alt="WatchPorn">watchporn.to</button></li>
-            <li><button onclick="window.location.href='https://m.chaturbate.com/tag/18/female/';"><img src="https://m.chaturbate.com/favicon.ico" alt="Chaturbate">chaturbate.com</button></li>
-            <li><button onclick="window.location.href='https://thothub.to/';"><img src="https://thothub.to/favicon.ico" alt="Thothub">thothub.to</button></li>
-            <li><button onclick="window.location.href='https://sxyprn.net/Coco-Lovelock?page=0';"><img src="https://sxyprn.net/favicon.ico" alt="Sxyprn">sxyprn.net</button></li>
-            <li><button onclick="window.location.href='https://vporn.me/';"><img src="https://vporn.me/favicon.ico" alt="VPorn">vporn.me</button></li>
-            <li><button onclick="window.location.href='https://futtemax.net/assistir-sexyhot-ao-vivo-online-gratis-24-horas-hd/';"><img src="https://futtemax.net/favicon.ico" alt="Futemax">futtemax.net</button></li>
-            <li><button onclick="window.location.href='https://clothoff.io/pt';"><img src="https://clothoff.io/favicon.ico" alt="Clothoff">clothoff.io</button></li>
-            <li><button onclick="window.location.href='https://www.tushy.com/';"><img src="https://www.tushy.com/favicon.ico" alt="Tushy">tushy.com</button></li>
-            <li><button onclick="window.location.href='https://upornia.com/search/1/?s=K+Klixen';"><img src="https://upornia.com/favicon.ico" alt="Upornia">upornia.com</button></li>
-            <li><button onclick="window.location.href='https://www.igrupos.com/whatsapp';"><img src="https://www.igrupos.com/favicon.ico" alt="iGrupos">igrupos.com</button></li>
-            <li><button onclick="window.location.href='https://www.gruposwats.com/';"><img src="https://www.gruposwats.com/favicon.ico" alt="GruposWats">gruposwats.com</button></li>
-            <li><button onclick="window.location.href='https://m.yeptube.com/de/video/1072525/solo-amateur-webcam-teen-masturbation';"><img src="https://m.yeptube.com/favicon.ico" alt="YepTube">yeptube.com</button></li>
+            <!-- Incluindo todos os links -->
+            <li><button onclick="window.location.href='https://pornkai.com/videos?q=novinha';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">pornkai.com</button></li>
+            <li><button onclick="window.location.href='https://www.redtube.com.br/';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">redtube.com.br</button></li>
+            <li><button onclick="window.location.href='https://www.youporn.com/';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">youporn.com</button></li>
+            <li><button onclick="window.location.href='https://br.xhamster.com/';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">xhamster.com</button></li>
+            <li><button onclick="window.location.href='https://pornobrasil.com/novinhas/';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">pornobrasil.com</button></li>
+            <li><button onclick="window.location.href='https://www.sonovinhasbr.com/';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">sonovinhasbr.com</button></li>
+            <li><button onclick="window.location.href='https://www.erome.com/explore';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">erome.com</button></li>
+            <li><button onclick="window.location.href='https://adulto.grupos.top/grupodeputaria/HJMsNfh1dlDKU8CffWeXkk';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">adulto.grupos.top</button></li>
+            <li><button onclick="window.location.href='https://sexomaluco.com/tag/bbb/';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">sexomaluco.com</button></li>
+            <li><button onclick="window.location.href='https://redisex.club/watch/926402df4';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">redisex.club</button></li>
+            <li><button onclick="window.location.href='https://www.teenpies.com/?nats=GC1984.2.53.5422.0.0.0.0.0&switched=1&strack=0&mobile=1/';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">teenpies.com</button></li>
+            <li><button onclick="window.location.href='https://princesscum.com/?coupon=13406';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">princesscum.com</button></li>
+            <li><button onclick="window.location.href='https://tiktok-18.in/';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">tiktok-18.in</button></li>
+            <li><button onclick="window.location.href='https://www.eporner.com/search/novinha-sentando/';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">eporner.com</button></li>
+            <li><button onclick="window.location.href='https://ru.fap-guru.biz/инцест';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">fap-guru.biz</button></li>
+            <li><button onclick="window.location.href='https://pt.eporner.com/foto/59BqDQpYJzG/Loving-This-Big-Cock/';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">eporner.com</button></li>
+            <li><button onclick="window.location.href='https://www.linksdegrupo.com.br/';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">linksdegrupo.com.br</button></li>
+            <li><button onclick="window.location.href='https://pt.pornhub.com/';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">pornhub.com</button></li>
+            <li><button onclick="window.location.href='https://mat6tube.com/recent';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">mat6tube.com</button></li>
+            <li><button onclick="window.location.href='https://ok.porn/';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">ok.porn</button></li>
+            <li><button onclick="window.location.href='https://xcafe.com/videos/teen/';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">xcafe.com</button></li>
+            <li><button onclick="window.location.href='https://freefans.tv/';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">freefans.tv</button></li>
+            <li><button onclick="window.location.href='https://temp-mail.org/pt/';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">temp-mail.org</button></li>
+            <li><button onclick="window.location.href='https://fikfap.com/';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">fikfap.com</button></li>
+            <li><button onclick="window.location.href='https://www.mixputaria.com/category/sexo-caseiro/';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">mixputaria.com</button></li>
+            <li><button onclick="window.location.href='https://xvideosonly.com/';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">xvideosonly.com</button></li>
+            <li><button onclick="window.location.href='https://tubesafari.com/';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">tubesafari.com</button></li>
+            <li><button onclick="window.location.href='https://lumendatabase.org/';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">lumendatabase.org</button></li>
+            <li><button onclick="window.location.href='https://ww7.pornhoarder.tv/search/?search=Girlcum&sort=0&date=0&servers%5B%5D=21&servers%5B%5D=40&servers%5B%5D=12&servers%5B%5D=35&servers%5B%5D=25&servers%5B%5D=41&servers%5B%5D=17&author=0&page=1';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">pornhoarder.tv</button></li>
+            <li><button onclick="window.location.href='https://watchporn.to/search/Girlcum/';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">watchporn.to</button></li>
+            <li><button onclick="window.location.href='https://m.chaturbate.com/tag/18/female/';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">chaturbate.com</button></li>
+            <li><button onclick="window.location.href='https://thothub.to/';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">thothub.to</button></li>
+            <li><button onclick="window.location.href='https://sxyprn.net/Coco-Lovelock?page=0';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">sxyprn.net</button></li>
+            <li><button onclick="window.location.href='https://vporn.me/';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">vporn.me</button></li>
+            <li><button onclick="window.location.href='https://futtemax.net/assistir-sexyhot-ao-vivo-online-gratis-24-horas-hd/';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">futtemax.net</button></li>
+            <li><button onclick="window.location.href='https://clothoff.io/pt';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">clothoff.io</button></li>
+            <li><button onclick="window.location.href='https://www.tushy.com/';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">tushy.com</button></li>
+            <li><button onclick="window.location.href='https://upornia.com/search/1/?s=K+Klixen';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">upornia.com</button></li>
+            <li><button onclick="window.location.href='https://www.igrupos.com/whatsapp';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">igrupos.com</button></li>
+            <li><button onclick="window.location.href='https://www.gruposwats.com/';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">gruposwats.com</button></li>
+            <li><button onclick="window.location.href='https://m.yeptube.com/de/video/1072525/solo-amateur-webcam-teen-masturbation';"><img src="https://cdn-icons-png.flaticon.com/256/10775/10775096.png" alt="Ícone">yeptube.com</button></li>
         </ul>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            if (localStorage.getItem('authenticated') === 'true') {
+            if(localStorage.getItem('authenticated') === 'true') {
                 showContent();
             } else {
                 showLogin();
@@ -190,21 +193,38 @@
             const password = document.getElementById('password').value;
 
             if (email === 'luansilva8521@outlook.com.br' && password === '21072003@Ln') {
-                localStorage.setItem('authenticated', 'true');
-                showContent();
+                showSaveLogin();
             } else {
                 document.getElementById('error-message').style.display = 'block';
             }
         });
 
+        document.getElementById('save-yes').addEventListener('click', function() {
+            localStorage.setItem('authenticated', 'true');
+            localStorage.setItem('email', document.getElementById('email').value);
+            localStorage.setItem('password', document.getElementById('password').value);
+            showContent();
+        });
+
+        document.getElementById('save-no').addEventListener('click', function() {
+            showContent();
+        });
+
         function showContent() {
             document.getElementById('login-container').classList.remove('active');
+            document.getElementById('save-login-container').classList.remove('active');
             document.getElementById('content-container').classList.add('active');
         }
 
         function showLogin() {
             document.getElementById('login-container').classList.add('active');
             document.getElementById('content-container').classList.remove('active');
+            document.getElementById('save-login-container').classList.remove('active');
+        }
+
+        function showSaveLogin() {
+            document.getElementById('login-container').classList.remove('active');
+            document.getElementById('save-login-container').classList.add('active');
         }
     </script>
 </body>
